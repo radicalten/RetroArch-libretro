@@ -6,17 +6,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: git.libretro.com:5050/libretro-infrastructure/libretro-build-devkitpro:latest
-      options: --user root
+    container: devkitpro/devkitppc:latest
     steps:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Compile Retroarch
       run: |
         cd .
-        make -f Makefile.wii.salamander EXTERNAL_LIBOGC=0 GX_PTHREAD_LEGACY=0
-        make -f Makefile.griffin platform=wii EXTERNAL_LIBOGC=0 GX_PTHREAD_LEGACY=0
+        make -f Makefile.wii.salamander EXTERNAL_LIBOGC=1 GX_PTHREAD_LEGACY=0
+        make -f Makefile.griffin platform=wii EXTERNAL_LIBOGC=1 GX_PTHREAD_LEGACY=0
     - name: Create tarball
       run: |
           tar -cvf libretro_wii.a.tgz libretro_wii.a
