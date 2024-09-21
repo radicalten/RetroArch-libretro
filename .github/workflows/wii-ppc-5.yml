@@ -12,8 +12,8 @@ jobs:
     - name: Compile Retroarch
       run: |
         cd .
-        make -f Makefile.wii.salamander EXTERNAL_LIBOGC=1 GX_PTHREAD_LEGACY=0
-        make -f Makefile.griffin platform=wii EXTERNAL_LIBOGC=1 GX_PTHREAD_LEGACY=0
+        make -f Makefile.wii.salamander EXTERNAL_LIBOGC=0 GX_PTHREAD_LEGACY=0
+        make -f Makefile.griffin platform=wii EXTERNAL_LIBOGC=0 GX_PTHREAD_LEGACY=0
     - name: Create tarball
       run: |
           tar -cvf libretro_wii.a.tgz libretro_wii.a
