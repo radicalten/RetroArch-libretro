@@ -85,11 +85,11 @@ ifeq (qnx, $(platform))
    STATIC_BUILD = 0
 endif
 
-ifeq ($(STATIC_BUILD), 0)
-   LIBS               := $(WHOLE_START) $(WHOLE_END)
-else
-   LIBS               := $(WHOLE_START) -lretro_$(platform) $(WHOLE_END)
-endif
+#ifeq ($(STATIC_BUILD), 0)
+#   LIBS               := $(WHOLE_START) $(WHOLE_END)
+#else
+#   LIBS               := $(WHOLE_START) -lretro_$(platform) $(WHOLE_END)
+#endif
 
 libogc_platform    :=
 
