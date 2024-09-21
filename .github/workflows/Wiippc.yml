@@ -30,7 +30,10 @@ jobs:
         mkdir build && cd build
         cmake -DCMAKE_TOOLCHAIN_FILE="$DEVKITPRO/cmake/Wii.cmake" -DFREEGLUT_BUILD_DEMOS=OFF ..
         make && sudo -E PATH=$PATH make install 
-    - name: Compile
+    - name: Compile libretro_wii.a
+      run: |
+        make -f Makefile.ppc4lib
+    - name: Compile Retroarch
       run: |
         cd retroarch
         make -f Makefile.wii.salamander EXTERNAL_LIBOGC=1 GX_PTHREAD_LEGACY=0
