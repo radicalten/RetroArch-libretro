@@ -3,7 +3,7 @@ name: CI Wii2
 on:
   push:
     branches:
-    - fast
+    - fast2
 
 permissions:
   contents: read
