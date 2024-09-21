@@ -14,9 +14,6 @@ jobs:
       run: |
         cd .
         git clone https://github.com/libretro/RetroArch.git retroarch --recursive
-        cd retroarch
-        cd wii
-        make && sudo -E PATH=$PATH make install 
     - name: Install OpenGX
       run: |
         cd .
