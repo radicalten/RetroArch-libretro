@@ -1,4 +1,4 @@
-name: CI Wii
+name: CI Wii2
 
 on:
   push:
