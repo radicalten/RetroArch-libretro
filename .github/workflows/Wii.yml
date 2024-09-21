@@ -2,9 +2,8 @@ name: CI Wii
 
 on:
   push:
-  pull_request:
-  repository_dispatch:
-    types: [run_build]
+    branches:
+    - master
 
 permissions:
   contents: read
