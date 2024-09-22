@@ -16,10 +16,10 @@ jobs:
         make -f Makefile.griffin2 platform=wii EXTERNAL_LIBOGC=1 GX_PTHREAD_LEGACY=0
     - name: Create tarball
       run: |
-          tar -cvf fixGB_wii.dol.tgz fixGB_wii.dol
+          tar -cvf fixGB.dol.tgz fixGB_wii.dol
     - name: Upload
       uses: actions/upload-artifact@v4
       with:
         name: Artifact
         path: |
-          ./fixGB_wii.dol.tgz
+          ./fixGB.dol.tgz
