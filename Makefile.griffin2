@@ -126,8 +126,8 @@ else ifeq ($(libogc_platform), 1)
    ifeq ("$(wildcard $(ELF2DOL))","")
      ELF2DOL = $(DEVKITPRO)/tools/bin/elf2dol$(EXE_EXT)
    endif
-   EXT_TARGET := $(TARGET_NAME)_$(platform).dol
-   EXT_INTER_TARGET := $(TARGET_NAME)_$(platform).elf
+   EXT_TARGET := $(TARGET_NAME).dol
+   EXT_INTER_TARGET := $(TARGET_NAME).elf
 
    INCLUDE += -I.
 
